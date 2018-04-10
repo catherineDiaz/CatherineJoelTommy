@@ -6,7 +6,7 @@ CXXTESTFLAGS = --coverage
 all: test
 
 clean:
-	rm test test.gc* 
+	rm test test.gc* Math_utils.o
 
 test: Math_utils.o test.cpp
 	$(CXX) $(CXXFLAGS) test.cpp Math_utils.o -o test
