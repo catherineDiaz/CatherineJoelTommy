@@ -33,10 +33,12 @@ bool IsSquare(int num)
     }
 }
 
+//return true iff both x and y have the same parity
 bool EqualParity(int x, int y){
     return ((x<0 && y<0) || (x>0 && y>0));
 }
 
+//return true iff all elements of nums have the same parity
 bool EqualParity(std::vector<int> nums){
     bool equal=true;
     if(nums.front()>0){
