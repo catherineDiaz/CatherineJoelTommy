@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "math_utils.h"
+#include "Math_utils.h"
 #include <vector>
 using namespace std;
 

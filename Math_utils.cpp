@@ -1,14 +1,23 @@
-#include "math_utils.h"
+//
+//  math_utils.cpp
+//  PE14
+//
+//  Created by Joel Davidson on 4/10/18.
+//  Copyright © 2018 Joel Davidson. All rights reserved.
+//
+
+#include "Math_utils.h"
 #include <math.h>
 
 
-/**
 
+/**
+ 
  Given a number, this function will return true if the number given is  a square and false if it is not
  
  @params num -> number to check if its a square
-
-*/
+ 
+ */
 
 bool IsSquare(int num)
 {
@@ -22,4 +31,22 @@ bool IsSquare(int num)
     {
         return false;
     }
+}
+
+bool EqualParity(int x, int y){
+    return ((x<0 && y<0) || (x>0 && y>0));
+}
+
+bool EqualParity(std::vector<int> nums){
+    bool equal=true;
+    if(nums.front()>0){
+        for(auto &i : nums){
+            equal = (i>0);
+        }
+    }else{
+        for(auto &i : nums){
+            equal = (i<0);
+        }
+    }
+    return equal;
 }
