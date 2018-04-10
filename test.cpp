@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
-#include "math_utils.h"
+#include "Math_utils.h"
 
 
 
@@ -16,7 +16,7 @@ TEST_CASE ( "Check GetDigit function", "[GetDigit]") {
     REQUIRE( GetDigit(4, 1) == 4);
     REQUIRE( GetDigit(12345, 1) == 5);
     REQUIRE( GetDigit(12345, 100) == 3);
-    REQUIRE( GetDigit(-12345, 100 == 3);
+    REQUIRE( GetDigit(-12345, 100) == 3);
     REQUIRE( GetDigit(-7, 1) == 7);
 
     REQUIRE( GetDigit(12345, -1) == 5);
