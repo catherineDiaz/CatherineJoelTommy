@@ -1,5 +1,14 @@
-#include "math_utils.h"
+//
+//  math_utils.cpp
+//  PE14
+//
+//  Created by Joel Davidson on 4/10/18.
+//  Copyright © 2018 Joel Davidson. All rights reserved.
+//
+
+#include "Math_utils.h"
 #include <math.h>
+
 
 
 /**
@@ -8,7 +17,7 @@
 
  @params num -> number to check if its a square
 
-*/
+ */
 
 bool IsSquare(int num)
 {
@@ -46,4 +55,24 @@ int GetDigit(int num, int place) {
 //    catch (const std::invalid_argument& e) {
 //        std::cerr << "Invalid argument: " << e.what() << endl;
     return digit;
+}
+
+//return true iff both x and y have the same parity
+bool EqualParity(int x, int y){
+    return ((x<0 && y<0) || (x>0 && y>0));
+}
+
+//return true iff all elements of nums have the same parity
+bool EqualParity(std::vector<int> nums){
+    bool equal=true;
+    if(nums.front()>0){
+        for(auto &i : nums){
+            equal = (i>0);
+        }
+    }else{
+        for(auto &i : nums){
+            equal = (i<0);
+        }
+    }
+    return equal;
 }
