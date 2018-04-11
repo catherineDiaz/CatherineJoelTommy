@@ -20,5 +20,6 @@ bool IsSquare(int num);
 int GetDigit(int num, int place);
 bool EqualParity(int x, int y);
 bool EqualParity(std::vector<int> nums);
+double solveQuadratic(int a, int b, int c);
 
 #endif /* math_utils_hpp */
