@@ -19,7 +19,7 @@
 
  */
 
-bool IsSquare(int num)
+bool Math::IsSquare(int num)
 {
     float root = sqrt(num);
     if(floor(root) == root)
@@ -41,7 +41,7 @@ bool IsSquare(int num)
     @params place -> position in num from which a digit is extracted. Should be base 10. Can be negative.
 
 **/
-int GetDigit(int num, int place) {
+int Math::GetDigit(int num, int place) {
     int digit = 0;
     if ((abs(place) == 1) || (abs(place) == 10) || ((place / 10) % 10 == 0)) {
         if (num % place == num) {
@@ -58,12 +58,12 @@ int GetDigit(int num, int place) {
 }
 
 //return true iff both x and y have the same parity
-bool EqualParity(int x, int y){
+bool Math::EqualParity(int x, int y){
     return ((x<0 && y<0) || (x>0 && y>0));
 }
 
 //return true iff all elements of nums have the same parity
-bool EqualParity(std::vector<int> nums){
+bool Math::EqualParity(std::vector<int> nums){
     bool equal=true;
     if(nums.front()>0){
         for(auto &i : nums){

@@ -15,10 +15,12 @@
 #include <iostream>
 #include <vector>
 
-
-bool IsSquare(int num);
-int GetDigit(int num, int place);
-bool EqualParity(int x, int y);
-bool EqualParity(std::vector<int> nums);
+class Math {
+public:
+    static bool IsSquare(int num);
+    static int GetDigit(int num, int place);
+    static bool EqualParity(int x, int y);
+    static bool EqualParity(std::vector<int> nums);
+};
 
 #endif /* math_utils_hpp */
