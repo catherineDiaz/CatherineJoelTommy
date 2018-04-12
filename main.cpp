@@ -14,13 +14,15 @@ using namespace std;
 int main() {
     int x = 1;
     int y = -1;
+    int z = 1;
     vector<int> nums;
     nums.push_back(x);
     nums.push_back(y);
-    int p = EqualParity(x, y);
-    cout << "\nEqual parity returned " << p;
-    int q = EqualParity(nums);
-    cout << "\nEqual parity returned " << q << endl;
+    nums.push_back(z);
+    int p = Math::EqualParity(x, y);
+    cout << "\nEqualParity should return 0 " << p;
+    int q = Math::EqualParity(nums);
+    cout << "\nEqualParity should return 0 " << q << endl;
     
     return 0;
 }
