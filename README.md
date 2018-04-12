@@ -3,7 +3,7 @@
 To run: place all files in same directory
 enter:
 $ make
-$ test
+$ ./test
 This will run the tests. 
 
 Alternatively, place main.cpp, Math_utils.h and Math_utils.cpp in same directory and enter:
