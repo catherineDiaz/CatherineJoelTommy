@@ -1,8 +1,9 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "Math_utils.h"
+#include <vector>
 
-
+using namespace std;
 
 TEST_CASE ( "Check isSquare function", "[isSquare]") {
     REQUIRE( Math::IsSquare(1) == true );
@@ -25,4 +26,17 @@ TEST_CASE ( "Check GetDigit function", "[GetDigit]") {
 
     REQUIRE_THROWS_AS( Math::GetDigit(12, 44), std::invalid_argument );
     REQUIRE_THROWS_AS( Math::GetDigit(12, 1000), std::invalid_argument );
+}
+
+TEST_CASE ("Check EqualParity function", "[EqualParity]") {
+    REQUIRE( Math::EqualParity(1, -1) == false);
+    REQUIRE( Math::EqualParity(1, 1) == true);
+    REQUIRE( Math::EqualParity(-1, -1) == true);
+    
+    vector<int> notEq = {1, -1, 1};
+    vector<int> Eq = {1, 1, 1};
+    vector<int> EqNeg = {-1, -1, -1};
+    REQUIRE( Math::EqualParity(notEq) == false);
+    REQUIRE( Math::EqualParity(Eq) == true);
+    REQUIRE( Math::EqualParity(EqNeg) == true);
 }
