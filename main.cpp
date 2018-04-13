@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "Math_utils.h"
+#include "Math.h"
 #include <vector>
 using namespace std;
 
@@ -23,6 +23,13 @@ int main() {
     cout << "\nEqualParity should return 0 " << p;
     int q = Math::EqualParity(nums);
     cout << "\nEqualParity should return 0 " << q << endl;
+    
+    int a = 1;
+    int b = 3;
+    int c = 2;
+    
+    QuadraticAnswer QA = Math::solveQuadratic(a, b, c);
+    cout << "\nQuadratic solution x1 = " << QA.x1 << " x2 = " << QA.x2 << endl;
     
     return 0;
 }
