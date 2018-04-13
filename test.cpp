@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
-#include "Math_utils.h"
+#include "Math.h"
 #include <vector>
 
 using namespace std;
@@ -40,3 +40,11 @@ TEST_CASE ("Check EqualParity function", "[EqualParity]") {
     REQUIRE( Math::EqualParity(Eq) == true);
     REQUIRE( Math::EqualParity(EqNeg) == true);
 }
+
+TEST_CASE ("Check Quadratic function", "[solveQuadratic]") {
+    REQUIRE( Math::solveQuadratic(1, 3, 2).x1 == -1);
+    REQUIRE( Math::solveQuadratic(1, 3, 2).x2 == -2);
+}
+
+
+
